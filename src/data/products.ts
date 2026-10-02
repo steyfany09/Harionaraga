@@ -62,6 +62,7 @@ export interface StoreConfig {
   instagramUrl: string;
   operationalHours: string;
   locationCity: string;
+  shippingMethods: string;
   projectNote: string;
 }
 
@@ -71,8 +72,9 @@ export const STORE_CONFIG: StoreConfig = {
   subtitle: "Koleksi bag charms, gantungan kunci, dan pernak-pernik handmade pastel yang dirancang dengan teliti untuk mempercantik tas dan barang kesayanganmu.",
   instagramHandle: INSTAGRAM_HANDLE,
   instagramUrl: INSTAGRAM_URL,
-  operationalHours: "Senin - Sabtu: 09.00 - 18.00 WIB",
-  locationCity: "Jakarta & Sekitarnya (Kirim Seluruh Indonesia)",
+  operationalHours: "Senin – Sabtu: 09.00 – 18.00 WIB",
+  locationCity: "Yogyakarta",
+  shippingMethods: "JNE & Lion",
   projectNote: "Proyek Mata Kuliah Manajemen Proyek — Dikembangkan untuk simulasi bisnis e-commerce katalog nyata.",
 };
 
@@ -370,7 +372,7 @@ export const ORDER_STEPS = [
   {
     step: '04',
     title: 'Pesanan Dikirim ke Alamatmu',
-    desc: 'Setelah pembayaran terverifikasi, pesanan dirangkai dan dikemas cantik kemudian dikirim aman ke alamatmu.',
+    desc: 'Setelah pembayaran terverifikasi, pesanan dirangkai dan dikemas cantik kemudian dikirim dari Yogyakarta menggunakan ekspedisi JNE atau Lion.',
   },
 ];
 

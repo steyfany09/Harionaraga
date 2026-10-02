@@ -90,8 +90,18 @@ export const AboutSection: React.FC = () => {
                 </div>
 
                 <div className="flex justify-between items-center py-2 border-b border-[#F7EFEA]">
+                  <span className="font-medium text-[#8F7466]">Lokasi Toko</span>
+                  <span className="font-semibold text-[#4A2F25]">Yogyakarta</span>
+                </div>
+
+                <div className="flex justify-between items-center py-2 border-b border-[#F7EFEA]">
                   <span className="font-medium text-[#8F7466]">Pengiriman</span>
-                  <span className="font-semibold text-[#4A2F25]">Ekspedisi Nasional (JNE/J&T/SiCepat)</span>
+                  <span className="font-semibold text-[#4A2F25]">JNE & Lion</span>
+                </div>
+
+                <div className="flex justify-between items-center py-2 border-b border-[#F7EFEA]">
+                  <span className="font-medium text-[#8F7466]">Jam Operasional</span>
+                  <span className="font-semibold text-[#4A2F25]">Senin–Sabtu, 09.00–18.00 WIB</span>
                 </div>
 
                 <div className="flex justify-between items-center py-2">

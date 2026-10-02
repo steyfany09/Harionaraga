@@ -112,7 +112,7 @@ export const Hero: React.FC = () => {
                 <div className="px-3 pt-3 pb-1 text-center sm:text-left flex items-center justify-between">
                   <div>
                     <p className="text-xs font-bold text-[#4A2F25] font-heading">Koleksi Aksesori Manis</p>
-                    <p className="text-[11px] text-[#8C7164]">Tersedia untuk pengiriman ke seluruh kota</p>
+                    <p className="text-[11px] text-[#8C7164]">Pengiriman dari Yogyakarta (JNE & Lion)</p>
                   </div>
                   <span className="text-xs font-bold text-[#D84C74] bg-[#FCE7EC] px-2 py-0.5 rounded-md">
                     Mulai Rp 20rb-an

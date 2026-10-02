@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, MapPin, Clock, Sparkles } from 'lucide-react';
+import { Instagram, MapPin, Clock, Sparkles, Truck } from 'lucide-react';
 import { STORE_CONFIG, BRAND_ASSETS } from '../data/products';
 
 interface FooterProps {
@@ -80,7 +80,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGuide }) => {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#D84C74] shrink-0 mt-0.5" />
-                <span>{STORE_CONFIG.locationCity}</span>
+                <span>Lokasi: {STORE_CONFIG.locationCity}</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Truck className="w-4 h-4 text-[#D84C74] shrink-0 mt-0.5" />
+                <span>Pengiriman: {STORE_CONFIG.shippingMethods}</span>
               </li>
             </ul>
           </div>

@@ -131,7 +131,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Pengiriman aman dengan kemasan rapi</span>
+                  <span>Pengiriman dari Yogyakarta via JNE & Lion</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
