@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { MessageCircle } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CatalogSection } from './components/CatalogSection';
@@ -15,7 +15,7 @@ import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
 import { ProductModal } from './components/ProductModal';
 import { GuideModal } from './components/GuideModal';
-import { Product, buildGeneralWhatsAppUrl } from './data/products';
+import { Product, INSTAGRAM_URL } from './data/products';
 
 export default function App() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -62,18 +62,18 @@ export default function App() {
         onClose={() => setIsGuideOpen(false)}
       />
 
-      {/* Floating WhatsApp Quick Button for Mobile & Quick Inquiries */}
+      {/* Floating Instagram Quick Button for Mobile & Quick Inquiries */}
       <aside aria-label="Aksi Cepat" className="fixed bottom-5 right-5 z-30">
         <a
-          href={buildGeneralWhatsAppUrl('Pemesanan Produk Harionaraga')}
+          href={INSTAGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center gap-2.5 px-4 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-md hover:shadow-lg active:scale-95 transition-all duration-200"
-          title="Chat langsung via WhatsApp"
+          className="group flex items-center gap-2.5 px-4 py-3 bg-[#D84C74] hover:bg-[#C23C62] text-white rounded-full shadow-md hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
+          title="Kunjungi & Pesan via Instagram @harionaraga.id"
         >
-          <MessageCircle className="w-5 h-5 fill-white" />
+          <Instagram className="w-5 h-5" />
           <span className="text-xs sm:text-sm font-bold tracking-wide pr-1">
-            Chat WhatsApp
+            Pesan via Instagram
           </span>
         </a>
       </aside>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { X, MessageCircle, Heart, Check, Package, Sparkles } from 'lucide-react';
-import { Product, formatRupiah, buildProductWhatsAppUrl } from '../data/products';
+import { X, Instagram, Check, Package } from 'lucide-react';
+import { Product, formatRupiah, INSTAGRAM_URL } from '../data/products';
 import { ProductPlaceholder } from './ProductPlaceholder';
 
 interface ProductModalProps {
@@ -35,12 +35,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
   if (!product) return null;
 
-  const handleOrder = () => {
-    const waUrl = buildProductWhatsAppUrl(product, customNote);
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
-  };
-
   const hasImage = Boolean(product.image && !imgError);
+  const isAvailable = product.stock > 0;
 
   return (
     <div 
@@ -82,11 +78,17 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                 />
               )}
 
-              {/* Status badge */}
+              {/* Status & Stock badge */}
               <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
-                <span className="px-2.5 py-1 text-xs font-semibold rounded-lg shadow-2xs backdrop-blur-xs bg-emerald-50 text-emerald-700 border border-emerald-200/60">
-                  {product.stockStatus}
-                </span>
+                {isAvailable ? (
+                  <span className="px-2.5 py-1 text-xs font-semibold rounded-lg shadow-2xs backdrop-blur-xs bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                    Stok tersedia: {product.stock} buah
+                  </span>
+                ) : (
+                  <span className="px-2.5 py-1 text-xs font-semibold rounded-lg shadow-2xs backdrop-blur-xs bg-rose-50 text-rose-600 border border-rose-200/60">
+                    Stok habis
+                  </span>
+                )}
               </div>
             </div>
 
@@ -101,17 +103,24 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                 </h3>
               </div>
 
-              {/* Price */}
-              <div className="flex items-baseline gap-2">
-                <span className="text-2xl sm:text-3xl font-bold font-heading text-[#D84C74] tabular-nums">
+              {/* Price & Stock Display */}
+              <div className="space-y-1">
+                <span className="text-2xl sm:text-3xl font-bold font-heading text-[#D84C74] tabular-nums block">
                   {formatRupiah(product.price)}
                 </span>
+                <p className="text-xs text-[#705649]">
+                  {isAvailable ? (
+                    <span className="text-emerald-700 font-medium">✓ Siap dipesan ({product.stock} buah tersedia)</span>
+                  ) : (
+                    <span className="text-rose-600 font-medium">✕ Produk saat ini sedang habis</span>
+                  )}
+                </p>
               </div>
 
               {/* Lead Time Note */}
               <div className="flex items-center gap-2 text-xs text-[#705649] bg-[#FAF7F2] p-2.5 rounded-xl border border-[#EFE5DE]">
                 <Package className="w-4 h-4 text-[#D84C74] shrink-0" />
-                <span>Pemesanan & Konfirmasi Langsung via WhatsApp</span>
+                <span>Pemesanan langsung via DM Instagram resmi @harionaraga.id</span>
               </div>
 
               {/* Highlights */}
@@ -126,7 +135,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Bisa konsultasi kustom warna atau inisial</span>
+                  <span>Bisa konsultasi kustom warna atau inisial via DM</span>
                 </div>
               </div>
             </div>
@@ -142,35 +151,28 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
             </div>
           )}
 
-          {/* Custom Request Input */}
-          <div className="space-y-2 border-t border-[#F0E4DC] pt-4">
-            <label htmlFor="custom-note" className="block text-xs font-bold text-[#4A2F25] font-heading">
-              Catatan Pemesanan / Request Kustom (Opsional):
-            </label>
-            <textarea
-              id="custom-note"
-              rows={2}
-              value={customNote}
-              onChange={(e) => setCustomNote(e.target.value)}
-              placeholder="Contoh: Mau tanya stok atau request warna / inisial..."
-              className="w-full text-xs sm:text-sm p-3 rounded-xl border border-[#E2D4CC] bg-[#FFFDFC] text-[#4A2F25] focus:outline-none focus:ring-2 focus:ring-[#D84C74]/30 focus:border-[#D84C74] placeholder-[#A89387] resize-none"
-            />
-            <p className="text-[11px] text-[#8F7466]">
-              Catatan ini akan otomatis disertakan saat Anda mengirim pesan ke WhatsApp admin.
-            </p>
-          </div>
-
           {/* Action Button */}
-          <div className="pt-2">
-            <button
-              onClick={handleOrder}
-              className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-2xl text-sm font-bold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-98 shadow-sm transition-all"
-            >
-              <MessageCircle className="w-5 h-5 fill-white/20" />
-              <span>Pesan Sekarang via WhatsApp</span>
-            </button>
+          <div className="pt-2 border-t border-[#F0E4DC]">
+            {isAvailable ? (
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-2xl text-sm font-bold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-98 shadow-sm transition-all cursor-pointer"
+              >
+                <Instagram className="w-5 h-5" />
+                <span>Pesan Sekarang via Instagram</span>
+              </a>
+            ) : (
+              <button
+                disabled
+                className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-2xl text-sm font-bold text-[#8F7466] bg-[#F2E7E0] cursor-not-allowed opacity-80"
+              >
+                <span>Stok Habis — Pemesanan Ditutup</span>
+              </button>
+            )}
             <p className="text-center text-[11px] text-[#9E8273] mt-2">
-              Format pesanan akan otomatis terisi dan siap dikirim
+              Tautan akan membuka profil dan DM Instagram resmi @harionaraga.id di tab baru
             </p>
           </div>
 

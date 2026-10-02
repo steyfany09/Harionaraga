@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowDown, MessageCircle, Heart, Sparkles, ShieldCheck } from 'lucide-react';
-import { STORE_CONFIG, HERO_ASSETS, buildGeneralWhatsAppUrl } from '../data/products';
+import { ArrowDown, Instagram, Heart, Sparkles, ShieldCheck } from 'lucide-react';
+import { STORE_CONFIG, HERO_ASSETS, INSTAGRAM_URL } from '../data/products';
 
 export const Hero: React.FC = () => {
   const [imageError, setImageError] = useState(false);
@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
               <span className="text-[#D3C3BA]">·</span>
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#D84C74]" />
-                <span>Langsung Chat Admin</span>
+                <span>Langsung DM Instagram</span>
               </div>
             </div>
 
@@ -54,20 +54,20 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
               <a
                 href="#katalog"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-95 rounded-2xl shadow-sm transition-all text-center"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-95 rounded-2xl shadow-sm transition-all text-center cursor-pointer"
               >
                 <span>Lihat Koleksi Produk</span>
                 <ArrowDown className="w-4 h-4 animate-bounce" />
               </a>
 
               <a
-                href={buildGeneralWhatsAppUrl('Konsultasi & Custom Order Aksesori')}
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-semibold text-[#5C3A2E] bg-white hover:bg-[#FDFBF9] hover:border-[#D84C74]/40 active:scale-95 rounded-2xl border border-[#E8DCD4] shadow-2xs transition-all text-center"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-semibold text-[#5C3A2E] bg-white hover:bg-[#FDFBF9] hover:border-[#D84C74]/40 active:scale-95 rounded-2xl border border-[#E8DCD4] shadow-2xs transition-all text-center cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                <span>Tanya / Request Custom</span>
+                <Instagram className="w-4 h-4 text-[#D84C74]" />
+                <span>Kunjungi Instagram Resmi</span>
               </a>
             </div>
 
@@ -126,8 +126,8 @@ export const Hero: React.FC = () => {
                   <Heart className="w-4 h-4 fill-[#D84C74]" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#4A2F25]">Order via WA</p>
-                  <p className="text-[11px] text-[#8C7164]">Tanpa repot buat akun</p>
+                  <p className="text-xs font-bold text-[#4A2F25]">Order via Instagram</p>
+                  <p className="text-[11px] text-[#8C7164]">DM resmi @harionaraga.id</p>
                 </div>
               </div>
 

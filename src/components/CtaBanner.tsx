@@ -1,6 +1,6 @@
 import React from 'react';
-import { MessageCircle, Sparkles, Heart } from 'lucide-react';
-import { STORE_CONFIG, buildGeneralWhatsAppUrl } from '../data/products';
+import { Instagram, Sparkles, Heart } from 'lucide-react';
+import { STORE_CONFIG, INSTAGRAM_URL } from '../data/products';
 
 export const CtaBanner: React.FC = () => {
   return (
@@ -27,23 +27,23 @@ export const CtaBanner: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-[#695144] leading-relaxed">
-              Punya ide paduan warna beads sendiri, ingin request inisial nama, atau bingung memilih aksesori yang cocok untuk hadiah? Kami siap membantu konsultasi lewat WhatsApp!
+              Punya ide paduan warna beads sendiri, ingin request inisial nama, atau bingung memilih aksesori yang cocok untuk hadiah? Kami siap membantu konsultasi lewat DM Instagram!
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href={buildGeneralWhatsAppUrl('Konsultasi Pesanan & Custom Aksesori')}
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-bold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-95 rounded-2xl shadow-sm transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-bold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-95 rounded-2xl shadow-sm transition-all cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4 fill-white/20" />
-                <span>Chat Admin WhatsApp Sekarang</span>
+                <Instagram className="w-4 h-4" />
+                <span>Hubungi Instagram @harionaraga.id</span>
               </a>
 
               <a
                 href="#katalog"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-semibold text-[#5C3A2E] bg-white hover:bg-[#FDFBF9] active:scale-95 rounded-2xl border border-[#E8DCD4] transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-semibold text-[#5C3A2E] bg-white hover:bg-[#FDFBF9] active:scale-95 rounded-2xl border border-[#E8DCD4] transition-all cursor-pointer"
               >
                 <span>Eksplor Katalog Dulu</span>
               </a>

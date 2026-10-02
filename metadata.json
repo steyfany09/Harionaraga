@@ -1,6 +1,8 @@
 {
   "name": "Harionaraga - Katalog Aksesori Lucu & Estetik",
-  "description": "Website e-commerce katalog produk aksesori manis, bag charms, gantungan kunci, dan phone straps Harionaraga untuk pemesanan via WhatsApp.",
+  "description": "Website e-commerce katalog produk aksesori manis, bag charms, gantungan kunci, dan phone straps Harionaraga untuk pemesanan via Instagram.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

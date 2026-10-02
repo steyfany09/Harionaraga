@@ -25,7 +25,7 @@ export const AboutSection: React.FC = () => {
                 <strong className="text-[#4A2F25] font-semibold">{STORE_CONFIG.brandName}</strong> berawal dari kecintaan terhadap detail estetika bernuansa pastel dan hangat. Kami percaya bahwa sebuah bag charm mungil atau gantungan kunci manik yang manis mampu memberikan sentuhan mood positif dalam setiap kegiatan sehari-hari.
               </p>
               <p>
-                Website katalog ini dirancang dan dikembangkan sebagai bagian dari tugas praktikum mata kuliah <strong className="text-[#4A2F25] font-semibold">Manajemen Proyek</strong>. Melalui inisiatif ini, kami mengintegrasikan manajemen rantai pasok material manik-manik, standardisasi kualitas pengerjaan handmade, serta alur pemesanan digital yang transparan dan bersahabat langsung via WhatsApp.
+                Website katalog ini dirancang dan dikembangkan sebagai bagian dari tugas praktikum mata kuliah <strong className="text-[#4A2F25] font-semibold">Manajemen Proyek</strong>. Melalui inisiatif ini, kami mengintegrasikan manajemen rantai pasok material manik-manik, standardisasi kualitas pengerjaan handmade, serta alur pemesanan digital yang transparan dan bersahabat langsung via DM Instagram.
               </p>
               <p>
                 Setiap item dirangkai secara manual dengan kontrol mutu yang terjaga, memastikan sambungan yang kokoh, bahan yang awet, dan kemasan unboxing yang menyenangkan bagi para pembeli.
@@ -86,7 +86,7 @@ export const AboutSection: React.FC = () => {
 
                 <div className="flex justify-between items-center py-2 border-b border-[#F7EFEA]">
                   <span className="font-medium text-[#8F7466]">Metode Pemesanan</span>
-                  <span className="font-semibold text-emerald-700">Langsung via WhatsApp (Tanpa Login)</span>
+                  <span className="font-semibold text-[#D84C74]">Langsung via DM Instagram (@harionaraga.id)</span>
                 </div>
 
                 <div className="flex justify-between items-center py-2 border-b border-[#F7EFEA]">
@@ -96,8 +96,8 @@ export const AboutSection: React.FC = () => {
 
                 <div className="flex justify-between items-center py-2">
                   <span className="font-medium text-[#8F7466]">Status Katalog</span>
-                  <span className="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-semibold text-[11px]">
-                    Katalog Aktif & Terintegrasi WA
+                  <span className="px-2 py-0.5 rounded-md bg-pink-50 text-[#D84C74] font-semibold text-[11px]">
+                    Katalog Aktif & Terhubung Instagram
                   </span>
                 </div>
               </div>

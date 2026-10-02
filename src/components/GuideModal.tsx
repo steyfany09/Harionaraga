@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Sparkles, Folder, FileText, Image, MessageCircle, Github, Globe } from 'lucide-react';
+import { X, Sparkles, Folder, FileText, Image, Instagram, Github, Globe } from 'lucide-react';
 import { STORE_CONFIG } from '../data/products';
 
 interface GuideModalProps {
@@ -67,29 +67,37 @@ export const GuideModal: React.FC<GuideModalProps> = ({ isOpen, onClose }) => {
               <span>1. Struktur File Utama</span>
             </h4>
             <div className="bg-[#FAF7F2] p-3.5 rounded-2xl border border-[#EFE5DE] space-y-1.5 font-mono text-xs">
-              <p><strong className="text-[#D84C74]">src/data/products.ts</strong> ➔ Seluruh data produk, kategori, & nomor WhatsApp.</p>
+              <p><strong className="text-[#D84C74]">src/data/products.ts</strong> ➔ Seluruh data produk, kategori, informasi stok, & link Instagram.</p>
               <p><strong className="text-[#D84C74]">src/assets/images/</strong> ➔ Tempat menyimpan file foto produk asli (JPG/PNG/WebP).</p>
               <p><strong className="text-[#D84C74]">src/components/</strong> ➔ Komponen tampilan (Navbar, Hero, Katalog, Detail, Footer).</p>
               <p><strong className="text-[#D84C74]">src/App.tsx</strong> ➔ Halaman utama aplikasi React.</p>
             </div>
           </div>
 
-          {/* Section 2: Cara Mengganti Nomor WhatsApp Toko */}
+          {/* Section 2: Cara Mengatur Link Instagram & Jumlah Stok */}
           <div className="space-y-2">
             <h4 className="font-heading font-bold text-base text-[#3E271E] flex items-center gap-2">
-              <MessageCircle className="w-4 h-4 text-[#25D366]" />
-              <span>2. Cara Mengubah Nomor WhatsApp Bisnis (Klien)</span>
+              <Instagram className="w-4 h-4 text-[#D84C74]" />
+              <span>2. Pengaturan Akun Instagram & Jumlah Stok Produk</span>
             </h4>
             <p>
-              Buka file <code className="bg-[#FCE7EC] text-[#9D3D58] px-1.5 py-0.5 rounded font-mono text-xs">src/data/products.ts</code>, lalu cari variabel konfigurasi <code className="font-mono text-xs text-[#3E271E]">WHATSAPP_NUMBER</code> di bagian atas:
+              Buka file <code className="bg-[#FCE7EC] text-[#9D3D58] px-1.5 py-0.5 rounded font-mono text-xs">src/data/products.ts</code>:
             </p>
             <pre className="bg-[#2D201A] text-[#F5EFEB] p-3.5 rounded-xl overflow-x-auto text-xs font-mono">
-{`// Ganti dengan nomor resmi WhatsApp bisnis klien sebelum go-live:
-export const WHATSAPP_NUMBER = "6281234567890"; 
-export const DISPLAY_WHATSAPP = "+62 812-3456-7890";`}
+{`// 1. Tautan Instagram Resmi Pemesanan:
+export const INSTAGRAM_URL = "https://www.instagram.com/harionaraga.id?stkn=bmw1NG05N3l5bTNl";
+
+// 2. Mengubah jumlah stok produk secara manual (simulasi 2-5 buah):
+{
+  id: 'hn-01',
+  name: 'Foxy',
+  price: 65000,
+  stock: 3, // Ubah angka ini untuk update stok (jika 0, tombol order otomatis nonaktif)
+  ...
+}`}
             </pre>
             <p className="text-[11px] text-[#8F7466]">
-              ⚠️ Pastikan menggunakan format internasional tanpa spasi, tanda strip, atau awalan &apos;+&apos; (contoh yang benar: <code>6281234567890</code>).
+              💡 <em>Catatan:</em> Jumlah stok awal (2–5 buah) adalah data simulasi untuk demo tugas kuliah Manajemen Proyek dan dapat diubah sewaktu-waktu sesuai stok riil.
             </p>
           </div>
 

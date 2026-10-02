@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Menu, X, Sparkles } from 'lucide-react';
-import { STORE_CONFIG, BRAND_ASSETS, buildGeneralWhatsAppUrl } from '../data/products';
+import { Instagram, Menu, X, Sparkles } from 'lucide-react';
+import { STORE_CONFIG, BRAND_ASSETS, INSTAGRAM_URL } from '../data/products';
 
 interface NavbarProps {
   onOpenGuide?: () => void;
@@ -81,13 +81,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGuide }) => {
             )}
 
             <a
-              href={buildGeneralWhatsAppUrl('Pemesanan Produk Harionaraga')}
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-95 rounded-full shadow-xs transition-all whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-[#D84C74] hover:bg-[#C23C62] active:scale-95 rounded-full shadow-xs transition-all whitespace-nowrap cursor-pointer"
+              title="Kunjungi & Pesan via DM Instagram @harionaraga.id"
             >
-              <MessageCircle className="w-4 h-4 fill-white/20" />
-              <span>Pesan via WhatsApp</span>
+              <Instagram className="w-4 h-4" />
+              <span>Pesan via Instagram</span>
             </a>
 
             {/* Mobile Hamburger Button */}

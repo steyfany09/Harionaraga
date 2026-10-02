@@ -1,6 +1,6 @@
 import React from 'react';
-import { MessageCircle, Instagram, MapPin, Clock, Sparkles } from 'lucide-react';
-import { STORE_CONFIG, BRAND_ASSETS, buildGeneralWhatsAppUrl } from '../data/products';
+import { Instagram, MapPin, Clock, Sparkles } from 'lucide-react';
+import { STORE_CONFIG, BRAND_ASSETS } from '../data/products';
 
 interface FooterProps {
   onOpenGuide?: () => void;
@@ -61,26 +61,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGuide }) => {
 
           {/* Col 3: Kontak & Jam Kerja */}
           <div className="space-y-3">
-            <h4 className="font-heading font-bold text-sm text-[#4A2F25]">Kontak Pemesanan</h4>
+            <h4 className="font-heading font-bold text-sm text-[#4A2F25]">Pemesanan & Kontak</h4>
             <ul className="space-y-2.5 text-xs text-[#6E564A]">
-              <li className="flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
-                <a 
-                  href={buildGeneralWhatsAppUrl('Informasi Produk')} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-[#D84C74] transition-colors font-medium text-[#4A2F25]"
-                >
-                  WhatsApp: {STORE_CONFIG.displayPhone}
-                </a>
-              </li>
               <li className="flex items-center gap-2">
                 <Instagram className="w-4 h-4 text-[#D84C74] shrink-0" />
                 <a 
                   href={STORE_CONFIG.instagramUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-[#D84C74] transition-colors"
+                  className="hover:text-[#D84C74] transition-colors font-medium text-[#4A2F25] underline decoration-[#F9B7C7]"
                 >
                   Instagram: {STORE_CONFIG.instagramHandle}
                 </a>

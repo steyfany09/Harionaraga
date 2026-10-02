@@ -36,16 +36,11 @@ export const BRAND_ASSETS = {
 };
 
 /**
- * KONFIGURASI NOMOR WHATSAPP RESMI HARIONARAGA
- * 
- * CATATAN PENTING:
- * Nomor di bawah ini adalah nomor PLACEHOLDER sementara.
- * Harap ganti nilai WHATSAPP_NUMBER dengan nomor resmi WhatsApp bisnis Harionaraga
- * milik klien sebelum website dipublikasikan (go-live).
- * Gunakan format angka internasional tanpa spasi, strip, atau tanda plus (contoh: '6281234567890').
+ * TAUTAN RESMI INSTAGRAM HARIONARAGA
+ * Digunakan sebagai saluran utama pemesanan produk via DM Instagram.
  */
-export const WHATSAPP_NUMBER = "6281234567890"; // <-- PLACEHOLDER: Ganti dengan nomor resmi klien sebelum publikasi
-export const DISPLAY_WHATSAPP = "+62 812-3456-7890";
+export const INSTAGRAM_URL = "https://www.instagram.com/harionaraga.id?stkn=bmw1NG05N3l5bTNl";
+export const INSTAGRAM_HANDLE = "@harionaraga.id";
 
 export interface Product {
   id: string;
@@ -54,7 +49,8 @@ export interface Product {
   category: 'blushy-baby' | 'stitch' | 'cake' | 'bunny' | 'lacely-padel' | 'others';
   categoryLabel: string;
   image: string;
-  stockStatus: 'Tersedia' | 'Pre-Order';
+  stock: number; // Jumlah stok (Data simulasi untuk demo & tugas kuliah)
+  stockStatus: 'Tersedia' | 'Pre-Order' | 'Stok Habis';
   description?: string;
 }
 
@@ -62,8 +58,6 @@ export interface StoreConfig {
   brandName: string;
   tagline: string;
   subtitle: string;
-  whatsappNumber: string;
-  displayPhone: string;
   instagramHandle: string;
   instagramUrl: string;
   operationalHours: string;
@@ -75,10 +69,8 @@ export const STORE_CONFIG: StoreConfig = {
   brandName: "Harionaraga",
   tagline: "Aksesori Lucu & Estetik untuk Setiap Momen Manismu",
   subtitle: "Koleksi bag charms, gantungan kunci, dan pernak-pernik handmade pastel yang dirancang dengan teliti untuk mempercantik tas dan barang kesayanganmu.",
-  whatsappNumber: WHATSAPP_NUMBER,
-  displayPhone: DISPLAY_WHATSAPP,
-  instagramHandle: "@harionaraga",
-  instagramUrl: "https://instagram.com",
+  instagramHandle: INSTAGRAM_HANDLE,
+  instagramUrl: INSTAGRAM_URL,
   operationalHours: "Senin - Sabtu: 09.00 - 18.00 WIB",
   locationCity: "Jakarta & Sekitarnya (Kirim Seluruh Indonesia)",
   projectNote: "Proyek Mata Kuliah Manajemen Proyek — Dikembangkan untuk simulasi bisnis e-commerce katalog nyata.",
@@ -101,6 +93,11 @@ export const CATEGORIES = [
 /**
  * DAFTAR LENGKAP 21 PRODUK HARIONARAGA
  * Terhubung 1-to-1 dengan file foto asli di /src/assets/images/
+ * 
+ * CATATAN SIMULASI STOK:
+ * Jumlah stok di bawah ini (antara 2 hingga 5 buah) adalah data simulasi
+ * untuk kebutuhan presentasi & demo tugas kuliah Manajemen Proyek, bukan stok aktual yang sudah dikonfirmasi klien.
+ * Nilai stok dapat diperbarui kapan saja secara manual pada file ini.
  */
 export const PRODUCTS: Product[] = [
   {
@@ -110,6 +107,7 @@ export const PRODUCTS: Product[] = [
     category: 'others',
     categoryLabel: 'Koleksi Spesial',
     image: foxyImg,
+    stock: 3,
     stockStatus: 'Tersedia',
   },
   {
@@ -119,6 +117,7 @@ export const PRODUCTS: Product[] = [
     category: 'others',
     categoryLabel: 'Koleksi Spesial',
     image: pookooImg,
+    stock: 2,
     stockStatus: 'Tersedia',
   },
   {
@@ -128,6 +127,7 @@ export const PRODUCTS: Product[] = [
     category: 'bunny',
     categoryLabel: 'Bunny Series',
     image: bunny01Img,
+    stock: 4,
     stockStatus: 'Tersedia',
   },
   {
@@ -137,6 +137,7 @@ export const PRODUCTS: Product[] = [
     category: 'bunny',
     categoryLabel: 'Bunny Series',
     image: bunny02Img,
+    stock: 3,
     stockStatus: 'Tersedia',
   },
   {
@@ -146,6 +147,7 @@ export const PRODUCTS: Product[] = [
     category: 'lacely-padel',
     categoryLabel: 'Lacely Series',
     image: lacely01Img,
+    stock: 5,
     stockStatus: 'Tersedia',
   },
   {
@@ -155,6 +157,7 @@ export const PRODUCTS: Product[] = [
     category: 'lacely-padel',
     categoryLabel: 'Lacely Series',
     image: lacely02Img,
+    stock: 2,
     stockStatus: 'Tersedia',
   },
   {
@@ -164,6 +167,7 @@ export const PRODUCTS: Product[] = [
     category: 'blushy-baby',
     categoryLabel: 'Blushy Baby Series',
     image: blushyBaby01Img,
+    stock: 4,
     stockStatus: 'Tersedia',
   },
   {
@@ -173,6 +177,7 @@ export const PRODUCTS: Product[] = [
     category: 'blushy-baby',
     categoryLabel: 'Blushy Baby Series',
     image: blushyBaby02Img,
+    stock: 3,
     stockStatus: 'Tersedia',
   },
   {
@@ -182,6 +187,7 @@ export const PRODUCTS: Product[] = [
     category: 'blushy-baby',
     categoryLabel: 'Blushy Baby Series',
     image: blushyBaby03Img,
+    stock: 5,
     stockStatus: 'Tersedia',
   },
   {
@@ -191,6 +197,7 @@ export const PRODUCTS: Product[] = [
     category: 'blushy-baby',
     categoryLabel: 'Blushy Baby Series',
     image: blushyBaby04Img,
+    stock: 2,
     stockStatus: 'Tersedia',
   },
   {
@@ -200,6 +207,7 @@ export const PRODUCTS: Product[] = [
     category: 'blushy-baby',
     categoryLabel: 'Blushy Baby Series',
     image: blushyBaby05Img,
+    stock: 4,
     stockStatus: 'Tersedia',
   },
   {
@@ -209,6 +217,7 @@ export const PRODUCTS: Product[] = [
     category: 'lacely-padel',
     categoryLabel: 'Padel Series',
     image: padel01Img,
+    stock: 3,
     stockStatus: 'Tersedia',
   },
   {
@@ -218,6 +227,7 @@ export const PRODUCTS: Product[] = [
     category: 'lacely-padel',
     categoryLabel: 'Padel Series',
     image: padel02Img,
+    stock: 5,
     stockStatus: 'Tersedia',
   },
   {
@@ -227,6 +237,7 @@ export const PRODUCTS: Product[] = [
     category: 'others',
     categoryLabel: 'Koleksi Spesial',
     image: pizzaImg,
+    stock: 2,
     stockStatus: 'Tersedia',
   },
   {
@@ -236,6 +247,7 @@ export const PRODUCTS: Product[] = [
     category: 'stitch',
     categoryLabel: 'Stitch Series',
     image: stitch01Img,
+    stock: 4,
     stockStatus: 'Tersedia',
   },
   {
@@ -245,6 +257,7 @@ export const PRODUCTS: Product[] = [
     category: 'stitch',
     categoryLabel: 'Stitch Series',
     image: stitch02Img,
+    stock: 3,
     stockStatus: 'Tersedia',
   },
   {
@@ -254,6 +267,7 @@ export const PRODUCTS: Product[] = [
     category: 'stitch',
     categoryLabel: 'Stitch Series',
     image: stitch03Img,
+    stock: 2,
     stockStatus: 'Tersedia',
   },
   {
@@ -263,6 +277,7 @@ export const PRODUCTS: Product[] = [
     category: 'stitch',
     categoryLabel: 'Stitch Series',
     image: stitch04Img,
+    stock: 5,
     stockStatus: 'Tersedia',
   },
   {
@@ -272,6 +287,7 @@ export const PRODUCTS: Product[] = [
     category: 'cake',
     categoryLabel: 'Cake Series',
     image: purpleRollCakeImg,
+    stock: 3,
     stockStatus: 'Tersedia',
   },
   {
@@ -281,6 +297,7 @@ export const PRODUCTS: Product[] = [
     category: 'cake',
     categoryLabel: 'Cake Series',
     image: puddingCakeImg,
+    stock: 4,
     stockStatus: 'Tersedia',
   },
   {
@@ -290,6 +307,7 @@ export const PRODUCTS: Product[] = [
     category: 'cake',
     categoryLabel: 'Cake Series',
     image: sliceCakeImg,
+    stock: 2,
     stockStatus: 'Tersedia',
   },
 ];
@@ -321,9 +339,9 @@ export const ADVANTAGES = [
   },
   {
     id: 'adv-5',
-    title: 'Pesan Langsung via WhatsApp',
-    description: 'Tanpa perlu repot membuat akun atau login. Pilih produk di katalog, klik tombol, dan langsung terhubung dengan admin ramah kami.',
-    iconName: 'MessageCircle',
+    title: 'Pesan Langsung via Instagram',
+    description: 'Tanpa perlu repot membuat akun. Pilih produk di katalog, klik tombol, dan langsung hubungi DM Instagram resmi @harionaraga.id.',
+    iconName: 'Instagram',
   },
   {
     id: 'adv-6',
@@ -337,22 +355,22 @@ export const ORDER_STEPS = [
   {
     step: '01',
     title: 'Pilih Aksesori Favorit',
-    desc: 'Jelajahi katalog kami, pilih model bag charm, gantungan kunci, atau koleksi karakter favoritmu.',
+    desc: 'Jelajahi katalog kami, periksa ketersediaan stok, dan pilih model bag charm atau gantungan kunci kesukaanmu.',
   },
   {
     step: '02',
-    title: 'Klik Pesan via WhatsApp',
-    desc: 'Sistem otomatis menyiapkan rincian nama produk dan harga untuk dikirim ke chat WhatsApp admin.',
+    title: 'Klik Pesan via Instagram',
+    desc: 'Klik tombol pemesanan untuk langsung menuju profil dan DM Instagram resmi @harionaraga.id.',
   },
   {
     step: '03',
-    title: 'Konfirmasi & Pembayaran',
-    desc: 'Admin Harionaraga akan mengonfirmasi ketersediaan, opsi kustom (jika ada), ongkos kirim, dan metode transfer/QRIS.',
+    title: 'Kirim DM & Konfirmasi',
+    desc: 'Sampaikan nama produk yang ingin dipesan (beserta request kustom jika ada). Admin akan mengonfirmasi ketersediaan & ongkir.',
   },
   {
     step: '04',
     title: 'Pesanan Dikirim ke Alamatmu',
-    desc: 'Produk dikemas cantik dengan aman dan nomor resi pengiriman akan segera diinfokan setelah paket dikirim.',
+    desc: 'Setelah pembayaran terverifikasi, pesanan dirangkai dan dikemas cantik kemudian dikirim aman ke alamatmu.',
   },
 ];
 
@@ -364,31 +382,19 @@ export function formatRupiah(amount: number): string {
 }
 
 /**
- * Membuat link WhatsApp untuk memesan produk tertentu
- * Menggunakan encodeURIComponent agar pesan, karakter khusus, dan spasi aman di URL.
+ * Tautan pemesanan resmi via Instagram Harionaraga
  */
-export function buildProductWhatsAppUrl(product: Product, customNote: string = ''): string {
-  const cleanNumber = WHATSAPP_NUMBER.replace(/[^0-9]/g, '');
-  const greeting = `Halo admin Harionaraga! ✨`;
-  const intent = `Saya tertarik untuk memesan produk dari katalog website:`;
-  const itemDetail = `• Nama Produk: ${product.name}\n• Harga: ${formatRupiah(product.price)}`;
-  
-  let noteText = '';
-  if (customNote.trim()) {
-    noteText = `\n• Catatan Khusus / Permintaan: ${customNote.trim()}`;
-  }
-
-  const closing = `\nApakah produk ini masih tersedia dan bagaimana rincian pemesanannya? Terima kasih! 💕`;
-
-  const fullMessage = `${greeting}\n\n${intent}\n${itemDetail}${noteText}\n${closing}`;
-  return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(fullMessage)}`;
+export function buildInstagramOrderUrl(product?: Product, customNote: string = ''): string {
+  return INSTAGRAM_URL;
 }
 
 /**
- * Membuat link WhatsApp untuk konsultasi umum atau kustom order
+ * Helper kompatibilitas lama yang mengarahkan ke link Instagram resmi
  */
+export function buildProductWhatsAppUrl(product: Product, customNote: string = ''): string {
+  return INSTAGRAM_URL;
+}
+
 export function buildGeneralWhatsAppUrl(topic: string = 'Tanya Produk'): string {
-  const cleanNumber = WHATSAPP_NUMBER.replace(/[^0-9]/g, '');
-  const message = `Halo admin Harionaraga! ✨\n\nSaya ingin bertanya atau konsultasi mengenai: *${topic}* di katalog Harionaraga.\n\nBisa dibantu untuk informasi lebih lanjut? Terima kasih! 💕`;
-  return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
+  return INSTAGRAM_URL;
 }

@@ -41,7 +41,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({ onSelectProduct 
             Koleksi Aksesori Manis Harionaraga
           </h2>
           <p className="text-[#695144] text-sm sm:text-base mt-2.5">
-            Temukan bag charm, gantungan kunci, dan phone strap favoritmu. Klik produk untuk rincian lengkap atau pesan langsung via WhatsApp.
+            Temukan bag charm, gantungan kunci, dan phone strap favoritmu. Klik produk untuk rincian lengkap atau pesan langsung via DM Instagram resmi kami.
           </p>
         </div>
 
