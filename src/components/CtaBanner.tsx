@@ -27,7 +27,7 @@ export const CtaBanner: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-[#695144] leading-relaxed">
-              Punya ide paduan warna beads sendiri, ingin request inisial nama, atau bingung memilih aksesori yang cocok untuk hadiah? Kami siap membantu konsultasi lewat DM Instagram!
+              Tertarik dengan salah satu aksesori manis di katalog kami atau bingung memilih model yang paling cocok untuk hadiah? Kami siap membantu konsultasi lewat DM Instagram!
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">

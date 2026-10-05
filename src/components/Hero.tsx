@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
               <span className="text-[#D3C3BA]">·</span>
               <div className="flex items-center gap-1.5">
                 <Sparkles className="w-4 h-4 text-[#D84C74]" />
-                <span>Bisa Request Custom</span>
+                <span>Material Berkualitas</span>
               </div>
               <span className="text-[#D3C3BA]">·</span>
               <div className="flex items-center gap-1.5">

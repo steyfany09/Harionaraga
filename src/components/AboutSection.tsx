@@ -48,8 +48,8 @@ export const AboutSection: React.FC = () => {
 
               <div className="p-3.5 rounded-2xl bg-white border border-[#EFE5DE] shadow-2xs">
                 <Sparkles className="w-4 h-4 text-[#D84C74] mb-1.5" />
-                <h4 className="font-heading font-bold text-xs sm:text-sm text-[#4A2F25]">Sentuhan Personal</h4>
-                <p className="text-[11px] text-[#7A6154] mt-0.5">Dapat disesuaikan dengan inisial nama atau paduan warna beads.</p>
+                <h4 className="font-heading font-bold text-xs sm:text-sm text-[#4A2F25]">Kerapian Estetik</h4>
+                <p className="text-[11px] text-[#7A6154] mt-0.5">Kombinasi warna pastel manis dan manik pilihan yang serasi.</p>
               </div>
             </div>
 

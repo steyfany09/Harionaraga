@@ -328,12 +328,6 @@ export const ADVANTAGES = [
     iconName: 'HeartHandshake',
   },
   {
-    id: 'adv-3',
-    title: 'Bisa Custom Order',
-    description: 'Ingin request inisial nama, warna beads khusus, atau paduan charm favorit? Kami menerima pesanan kustom sesuai keinginanmu.',
-    iconName: 'Palette',
-  },
-  {
     id: 'adv-4',
     title: 'Kemasan Rapi & Cantik',
     description: 'Setiap pesanan dikemas estetik dengan pouch atau greeting card manis. Sangat cocok juga dihadiahkan langsung untuk sahabat tersayang.',
@@ -367,7 +361,7 @@ export const ORDER_STEPS = [
   {
     step: '03',
     title: 'Kirim DM & Konfirmasi',
-    desc: 'Sampaikan nama produk yang ingin dipesan (beserta request kustom jika ada). Admin akan mengonfirmasi ketersediaan & ongkir.',
+    desc: 'Sampaikan nama produk yang ingin dipesan via DM. Admin akan mengonfirmasi ketersediaan stok & ongkir ke alamatmu.',
   },
   {
     step: '04',
@@ -386,14 +380,14 @@ export function formatRupiah(amount: number): string {
 /**
  * Tautan pemesanan resmi via Instagram Harionaraga
  */
-export function buildInstagramOrderUrl(product?: Product, customNote: string = ''): string {
+export function buildInstagramOrderUrl(product?: Product): string {
   return INSTAGRAM_URL;
 }
 
 /**
  * Helper kompatibilitas lama yang mengarahkan ke link Instagram resmi
  */
-export function buildProductWhatsAppUrl(product: Product, customNote: string = ''): string {
+export function buildProductWhatsAppUrl(product?: Product): string {
   return INSTAGRAM_URL;
 }
 

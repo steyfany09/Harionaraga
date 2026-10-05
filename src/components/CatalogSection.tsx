@@ -119,7 +119,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({ onSelectProduct 
             {selectedCategory !== 'all' && ` pada kategori "${CATEGORIES.find(c => c.id === selectedCategory)?.label}"`}
           </span>
           <span className="text-[11px] text-[#A68F83] hidden sm:inline">
-            Klik card untuk melihat detail lengkap & request kustom
+            Klik card untuk melihat detail produk & ketersediaan stok
           </span>
         </div>
 

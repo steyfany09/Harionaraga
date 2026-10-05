@@ -9,11 +9,9 @@ interface ProductModalProps {
 }
 
 export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
-  const [customNote, setCustomNote] = useState('');
   const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
-    setCustomNote('');
     setImgError(false);
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -135,7 +133,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Bisa konsultasi kustom warna atau inisial via DM</span>
+                  <span>Kemasan rapi & estetik cocok untuk hadiah</span>
                 </div>
               </div>
             </div>
